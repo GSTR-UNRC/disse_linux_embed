@@ -56,7 +56,7 @@ int main() {
 	while( (read_size = recv(client_sock , client_message , 2000, 0)) > 0 )
 	{
 		//Send the message back to client
-		write(client_sock , client_message , strlen(client_message));
+		write(client_sock , client_message , strlen(client_message)+1);
 		puts(client_message);
 	}
 
